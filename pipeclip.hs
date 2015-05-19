@@ -30,7 +30,10 @@ main =
      runArgs (Args (or ["--help" `elem` stdargs,"-h" `elem` stdargs])
                    ("--license" `elem` stdargs)
                    ("--stdout" `elem` stdargs)
-                   (case findIndex (== "--template") stdargs of
+                   (case findIndex (\x ->
+                                      (x == "--template") ||
+                                      (x == "-t"))
+                                   stdargs of
                       Just i ->
                         at stdargs (i + 1)
                       Nothing -> "txt"))
@@ -54,7 +57,7 @@ runArgs (Args help_ license_ sto templ) =
                                             ["-h,--help             Show this page"
                                             ,"--license             Print out the license."
                                             ,"--stdout              Print output to stdout instead of piping to the clipboard."
-                                            ,"--template EXT        Name the temporary file the editor edits tmp.EXT so that "
+                                            ,"-t,--template EXT     Name the temporary file the editor edits tmp.EXT so that "
                                             ,"                      it has highlighting and stuff."]))))
 
 runClip :: Bool -> String -> IO ()
