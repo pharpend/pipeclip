@@ -48,7 +48,7 @@ runArgs (Args help_ license_ sto templ) =
      |  not help_ -> runClip sto templ
      |  otherwise ->
        B.hPut stdout
-              (pack (mappend (unlines ["pipeclip v.0.1.0.0"
+              (pack (mappend (unlines ["pipeclip v.0.1.0.1"
                                       ,"Copyright (c) 2015, Peter Harpending."
                                       ,"Licensed under the FreeBSD license. See --license for info."
                                       ,mempty

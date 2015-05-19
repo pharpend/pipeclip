@@ -1,9 +1,9 @@
 name:                pipeclip
-version:             0.1.0.0
+version:             0.1.0.1
 synopsis:            Open your editor, pipe the output to the system clipboard
 description:         
   This opens up your @$EDITOR@ or @$VISUAL@ using the 
-  <https://hackage.haskell.org/package/editor-open @editor-open@ library.> It
+  <https://hackage.haskell.org/package/editor-open editor-open library.> It
   then takes the edited text and sends it to the X11 clipboard.
   .
   As such, this will only work if you have X11. Translated, this is limited to
@@ -49,4 +49,4 @@ source-repository head
 source-repository this
   type: git
   location: git://github.com/pharpend/pipeclip.git
-  tag: master
+  tag: 0.1.0.1
