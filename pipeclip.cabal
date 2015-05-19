@@ -37,7 +37,7 @@ executable pipeclip
   build-depends:
       base ==4.*
     , bytestring
-    , editor-open
+    , editor-open >=0.6
     , Hclip
     , safe
 
