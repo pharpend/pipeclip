@@ -6,6 +6,8 @@ inputted into the file, and pipes it to the X clipboard.
 
 As such, this program only works on Linux and BSD.
 
+I've tested it on Arch Linux and FreeBSD.
+
 Installation
 ------------
 
